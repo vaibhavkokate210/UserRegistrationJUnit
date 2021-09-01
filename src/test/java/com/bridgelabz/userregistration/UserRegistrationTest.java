@@ -38,4 +38,11 @@ public class UserRegistrationTest
 		boolean result=regex.validLastName("kokate");
 		Assert.assertEquals(false, result);
 	}
+	@Test
+	public void lastName_ValidationWill_ReturnFalse_IfNameLessThanThreeChar()
+	{
+		Regex regex=new Regex();
+		boolean result=regex.validLastName("kte");
+		Assert.assertEquals(false, result);
+	}
 }
