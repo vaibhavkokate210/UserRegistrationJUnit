@@ -16,4 +16,12 @@ public class UserRegistrationTest
 		boolean result=regex.validUserName("Vaibhav");
 		Assert.assertEquals(true, result);
 	}
+	
+	@Test
+	public void firstName_ValidationWill_ReturnFalse()
+	{
+		Regex regex=new Regex();
+		boolean result=regex.validUserName("vaibhav");
+		Assert.assertEquals(false, result);
+	}
 }
