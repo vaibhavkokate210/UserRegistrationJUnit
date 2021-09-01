@@ -31,4 +31,11 @@ public class UserRegistrationTest
 		boolean result=regex.validLastName("Kokate");
 		Assert.assertEquals(true, result);
 	}
+	@Test
+	public void lastName_ValidationWill_ReturnFalse()
+	{
+		Regex regex=new Regex();
+		boolean result=regex.validLastName("kokate");
+		Assert.assertEquals(false, result);
+	}
 }
