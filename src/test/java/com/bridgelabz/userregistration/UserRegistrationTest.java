@@ -13,7 +13,7 @@ public class UserRegistrationTest
 	public void firstName_ValidationWill_ReturnTrue()
 	{
 		Regex regex=new Regex();
-		boolean result=regex.validUserName("Vaibhav");
+		boolean result=regex.validFirstName("Vaibhav");
 		Assert.assertEquals(true, result);
 	}
 	
@@ -21,7 +21,14 @@ public class UserRegistrationTest
 	public void firstName_ValidationWill_ReturnFalse()
 	{
 		Regex regex=new Regex();
-		boolean result=regex.validUserName("vaibhav");
+		boolean result=regex.validFirstName("vaibhav");
 		Assert.assertEquals(false, result);
+	}
+	@Test
+	public void lastName_ValidationWill_ReturnTrue()
+	{
+		Regex regex=new Regex();
+		boolean result=regex.validLastName("Kokate");
+		Assert.assertEquals(true, result);
 	}
 }
