@@ -82,4 +82,12 @@ public class UserRegistrationTest
 		boolean result=regex.validEmail("vaibhav");
 		Assert.assertEquals(false, result);
 	}
+	@Test
+	public void email_ValidationWill_ReturnFalse_IfEmailStartsWithDot()
+	{
+		Regex regex=new Regex();
+		boolean result=regex.validEmail(".vaibhav@gmail.com");
+		Assert.assertEquals(false, result);
+	}
+	
 }
