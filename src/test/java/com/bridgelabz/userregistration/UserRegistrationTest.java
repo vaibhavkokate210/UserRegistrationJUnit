@@ -103,4 +103,12 @@ public class UserRegistrationTest
 		boolean result=regex.validPassword("ajayy");
 		Assert.assertEquals(false, result);
 	}
+	
+	@Test
+	public void password_ValidationWill_ReturnFalse_IfNotContainsSmallLetter()
+	{
+		Regex regex=new Regex();
+		boolean result=regex.validPassword("AJAY");
+		Assert.assertEquals(false, result);
+	}
 }
