@@ -111,4 +111,11 @@ public class UserRegistrationTest
 		boolean result=regex.validPassword("AJAY");
 		Assert.assertEquals(false, result);
 	}
+	@Test
+	public void password_ValidationWill_ReturnFalse_IfNotContainNumber()
+	{
+		Regex regex=new Regex();
+		boolean result=regex.validPassword("Ajay");
+		Assert.assertEquals(false, result);
+	}
 }
