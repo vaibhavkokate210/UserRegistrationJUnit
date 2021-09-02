@@ -17,5 +17,11 @@ public class Regex
 		Pattern p=Pattern.compile(reg);
 		return p.matcher(lastName).matches();
 	}
+	public boolean validMobileNo(String number)
+	{
+		String reg="[0-9]{2}\\s[0-9]{10}";
+		Pattern p=Pattern.compile(reg);
+		return p.matcher(number).matches();
+	}
 
 }
