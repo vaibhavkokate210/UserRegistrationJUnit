@@ -67,4 +67,13 @@ public class UserRegistrationTest
 		boolean result=regex.validMobileNo("91 99734529834");
 		Assert.assertEquals(false, result);
 	}
+	
+	@Test
+	public void email_ValidationWill_ReturnTrue()
+	{
+		Regex regex=new Regex();
+		boolean result=regex.validEmail("Vaibhavkokate123@gmail.com");
+		Assert.assertEquals(true, result);
+	}
+	
 }
