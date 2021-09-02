@@ -75,5 +75,11 @@ public class UserRegistrationTest
 		boolean result=regex.validEmail("Vaibhavkokate123@gmail.com");
 		Assert.assertEquals(true, result);
 	}
-	
+	@Test
+	public void email_ValidationWill_ReturnFalse_IfContainsOnlyAlphabet()
+	{
+		Regex regex=new Regex();
+		boolean result=regex.validEmail("vaibhav");
+		Assert.assertEquals(false, result);
+	}
 }
