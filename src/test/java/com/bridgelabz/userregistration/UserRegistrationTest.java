@@ -52,4 +52,11 @@ public class UserRegistrationTest
 		boolean result=regex.validMobileNo("91 9978345234");
 		Assert.assertEquals(true, result);
 	}
+	@Test
+	public void mobileNo_ValidationWill_ReturnFalse()
+	{
+		Regex regex=new Regex();
+		boolean result=regex.validMobileNo("91 997345234");
+		Assert.assertEquals(false, result);
+	}
 }
