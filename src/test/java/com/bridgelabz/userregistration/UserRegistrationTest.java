@@ -118,4 +118,14 @@ public class UserRegistrationTest
 		boolean result=regex.validPassword("Ajay");
 		Assert.assertEquals(false, result);
 	}
+	
+	@Test
+    public boolean email_ValidationWill_ReturnTrue(String email){
+        Regex reg = new Regex();
+        boolean result = reg.validEmail(email);
+        if (result)
+            return true;
+        else
+            return false;
+    }
 }
