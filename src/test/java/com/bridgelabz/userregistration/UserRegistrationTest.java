@@ -89,5 +89,12 @@ public class UserRegistrationTest
 		boolean result=regex.validEmail(".vaibhav@gmail.com");
 		Assert.assertEquals(false, result);
 	}
+	@Test
+	public void password_ValidationWill_ReturnTrue()
+	{
+		Regex regex=new Regex();
+		boolean result=regex.validPassword("Ajay#8972");
+		Assert.assertEquals(true, result);
+	}
 	
 }

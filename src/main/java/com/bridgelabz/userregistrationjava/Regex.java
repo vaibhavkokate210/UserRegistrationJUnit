@@ -30,5 +30,11 @@ public class Regex
 		Pattern p=Pattern.compile(reg, Pattern.CASE_INSENSITIVE);
 		return p.matcher(email).matches();
 	}
+	public static boolean validPassword(String password)
+	{
+		String reg="[a-z[0-9]+[A-Z]+[@#$]{1}+]{8,}";
+		Pattern p=Pattern.compile(reg);
+		return p.matcher(password).matches();
+	}
 
 }
