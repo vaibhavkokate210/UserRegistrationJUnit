@@ -96,5 +96,11 @@ public class UserRegistrationTest
 		boolean result=regex.validPassword("Ajay#8972");
 		Assert.assertEquals(true, result);
 	}
-	
+	@Test
+	public void password_ValidationWill_ReturnFalse_IfNotContainOneCaps()
+	{
+		Regex regex=new Regex();
+		boolean result=regex.validPassword("ajayy");
+		Assert.assertEquals(false, result);
+	}
 }
