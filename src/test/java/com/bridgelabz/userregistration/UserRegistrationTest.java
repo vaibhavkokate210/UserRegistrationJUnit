@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.bridgelabz.userregistrationjava.InvalidDetailException;
 import com.bridgelabz.userregistrationjava.Regex;
 
 public class UserRegistrationTest 
@@ -128,4 +129,83 @@ public class UserRegistrationTest
         else
             return false;
     }
+	@Test
+	public void firstName_ValidationWill_ReturnExcpetion()
+	{
+		Regex regex=new Regex();
+		boolean result=regex.validFirstName("vaibhav");
+	     try 
+	     {
+				if(result==false)
+		    		throw new InvalidDetailException("Invalid firstname");
+		 }
+	     catch (InvalidDetailException e) 
+	     {
+		    Assert.assertEquals("Invalid firstname", e.getMessage());
+	     }
+	}
+	
+	@Test
+	public void lastName_ValidationWill_ReturnException()
+	{
+		Regex regex=new Regex();
+		boolean result=regex.validLastName("kokate");
+		try
+		{
+			if(result==false)
+				throw new InvalidDetailException("Invalid lastname");
+		}
+		catch(InvalidDetailException e)
+		{
+			Assert.assertEquals("Invalid lastname", e.getMessage());
+		}
+		
+	}
+	
+	@Test
+	public void mobileNo_ValidationWill_ReturnException()
+	{
+		Regex regex=new Regex();
+		boolean result=regex.validMobileNo("91 997345234");
+		try
+		{
+			if(result==false)
+				throw new InvalidDetailException("Invalid mobile no");
+		}
+		catch(InvalidDetailException e)
+		{
+			Assert.assertEquals("Invalid mobile no", e.getMessage());
+		}
+	}
+	
+	@Test
+	public void email_ValidationWill_ReturnFalse_ThrowException()
+	{
+		Regex regex=new Regex();
+		boolean result=regex.validEmail("vaibhav");
+		try
+		{
+			if(result==false)
+				throw new InvalidDetailException("Invalid email");
+		}
+		catch(InvalidDetailException e)
+		{
+			Assert.assertEquals("Invalid email", e.getMessage());
+		}
+	}
+	@Test
+	public void password_ValidationWill_ReturnFalse_ThrowException()
+	{
+		Regex regex=new Regex();
+		boolean result=regex.validPassword("ajayy");
+		try
+		{
+			if(result==false)
+				throw new InvalidDetailException("Invalid password");
+		}
+		catch(InvalidDetailException e)
+		{
+			Assert.assertEquals("Invalid password", e.getMessage());
+		}
+	}
 }
